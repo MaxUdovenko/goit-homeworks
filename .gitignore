@@ -1,0 +1,22 @@
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+env/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# macOS
+.DS_Store
