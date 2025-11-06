@@ -13,8 +13,9 @@ def get_numbers_ticket(min, max, quantity):
     # max - максимальне можливе число у наборі (не більше 1000).
     check2 = max <= 1000
     check3 = min < max
+    check4 = (max - min) >= quantity
 
-    if sum([check1, check2, check3]) == 3:
+    if all([check1, check2, check3, check4]):
         # починаємо генерацію випадкових чисел за умови що min і max задані корректно
         # відповідно до умови домашнього завдання
 
@@ -22,7 +23,8 @@ def get_numbers_ticket(min, max, quantity):
             # Функція генерує вказану кількість унікальних чисел у заданому діапазоні.
             # в циклі врахована імовірність генерації випадкового числа, яке вже є в сеті
             # цикл буде виконуватися до моменту коли розмір сету буде рівний quantity
-            numbers_set.add(random.randint(min, max))
+            # numbers_set.add(random.randint(min, max))
+            print(numbers_set)
     else:
         print("умови не виконуються")
 
@@ -43,3 +45,11 @@ if __name__ == "__main__":
     print(f"{get_numbers_ticket(-1, 36, 5)=}\n")
     print(f"{get_numbers_ticket(1, 36000, 5)=}\n")
     print(f"{get_numbers_ticket(100, 36, 5)=}\n")
+
+    print(f"{get_numbers_ticket(-10, 10, 5)=}\n")
+    print(f"{get_numbers_ticket(1000, 1200, 10)=}\n")
+    print(f"{get_numbers_ticket(10, 4, 5)=}\n")
+    print(f"{get_numbers_ticket(10, 14, 6)=}\n")
+    print(f"{get_numbers_ticket(10, 14, 5)=}\n")
+    print(f"{get_numbers_ticket(10, 14, 4)=}\n")
+
