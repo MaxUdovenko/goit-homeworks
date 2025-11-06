@@ -2,9 +2,9 @@ import random
 
 
 def get_numbers_ticket(min, max, quantity):
-    '''
+    """
     Генерація унікальних випадкових чисел для лотерей
-    '''
+    """
 
     numbers_set = set()
 
@@ -23,8 +23,8 @@ def get_numbers_ticket(min, max, quantity):
             # Функція генерує вказану кількість унікальних чисел у заданому діапазоні.
             # в циклі врахована імовірність генерації випадкового числа, яке вже є в сеті
             # цикл буде виконуватися до моменту коли розмір сету буде рівний quantity
-            # numbers_set.add(random.randint(min, max))
-            print(numbers_set)
+            numbers_set.add(random.randint(min, max))
+            # print(numbers_set)
     else:
         print("умови не виконуються")
 
@@ -52,4 +52,3 @@ if __name__ == "__main__":
     print(f"{get_numbers_ticket(10, 14, 6)=}\n")
     print(f"{get_numbers_ticket(10, 14, 5)=}\n")
     print(f"{get_numbers_ticket(10, 14, 4)=}\n")
-
